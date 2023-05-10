@@ -1,0 +1,27 @@
+[package]
+name = "serenity-bot"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde_json = "1.0"
+dotenv = "0.15.0"
+serenity = { default-features = false, features = ["client", "gateway", "rustls_backend", "model"], version = "0.11.5" }
+tokio = "1.28.0"
+reqwest = { version = "0.11", features = ["json"] }
+jup-ag = "0.5.0"
+solana-sdk = "1.8.17"
+itertools = "0.10.0"
+spl-token = "3.1.0"
+currency_rs = "1.2.0"
+shuttle-runtime = "0.16.0"
+anyhow = "1.0.71"
+shuttle-secrets = "0.16.0"
+shuttle-serenity = "0.16.0"
+tracing = "0.1.37"
+
+[features]
+debug-logging = []
